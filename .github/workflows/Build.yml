@@ -24,12 +24,12 @@ jobs:
       with:
         python-version: "3.9"
     - name: Install dependencies
+      working-directory: cloud-resume-challenge/put-function
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
         ls
         pwd
-        cd put-function
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
