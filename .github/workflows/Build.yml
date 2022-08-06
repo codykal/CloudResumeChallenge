@@ -59,9 +59,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: us-west-2
       - run: sam build
-        working-directory: home/runner/work/CloudResumeChallenge/CloudResumeChallenge
+        working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
-        working-directory: home/runner/work/CloudResumeChallenge/CloudResumeChallenge
+        working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge
 
     # - name: Test with pytest
     #   working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge/put-function
