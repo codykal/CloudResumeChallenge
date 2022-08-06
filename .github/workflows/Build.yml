@@ -63,7 +63,21 @@ jobs:
       - run: sam build
         working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
-        working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge
+        working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge/resume-site
+  
+  update-frontend:
+    needs: build-infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: my-website-codykall
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          SOURCE_DIR: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge/resume-site
 
     # - name: Test with pytest
     #   working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge/put-function
