@@ -63,7 +63,7 @@ jobs:
       - run: sam build
         working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
-        working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge/resume-site
+        working-directory: /home/runner/work/CloudResumeChallenge/CloudResumeChallenge
   
   update-frontend:
     needs: build-infrastructure
