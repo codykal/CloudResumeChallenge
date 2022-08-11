@@ -1,6 +1,6 @@
 # Cloud Resume Challenge
 
-My implementation of Forrest Brazeal's Cloud Resume Challenge. Read my blog post at Dev.to
+My implementation of Forrest Brazeal's Cloud Resume Challenge. Read my blog post at [Dev.to](https://dev.to/codykal/aws-the-cloud-resume-challenge-3cii)
 
 <!-- * [CLion](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
 * [GoLand](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
