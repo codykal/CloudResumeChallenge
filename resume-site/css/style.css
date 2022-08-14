@@ -210,18 +210,20 @@ ol {
 .circle-progress .prog-title h3 {
 	font-size: 16px;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .circle-progress .prog-title h4 {
 	font-size: 16px;
 	text-transform: uppercase;
-	margin-left: 55px
+	text-align: center;
+
 }
 
 .circle-progress .prog-title h5 {
 	font-size: 16px;
 	text-transform: uppercase;
-	margin-left: 0px
+	text-align: center;
 }
 
 .circle-progress .prog-title p {
